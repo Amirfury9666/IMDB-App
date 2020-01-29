@@ -10,7 +10,13 @@ import com.fury.imdbapp.ui.ResultActivity
 import com.fury.imdbapp.util.Coroutines
 import com.fury.imdbapp.util.toast
 
-private val TAG  = SearchViewModel::class.java.simpleName
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 class SearchViewModel(private val repository : SearchRepository) : ViewModel(){
 
     var responseCallback : ResponseCallback<SearchResponse>?  = null

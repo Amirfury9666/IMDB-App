@@ -5,6 +5,13 @@ import com.fury.imdbapp.R
 import com.fury.imdbapp.base.core.BaseListAdapter
 import com.fury.imdbapp.response.search.Search
 
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 class ResultAdapter(private val list : ArrayList<Search>) : BaseListAdapter<Search>(DiffCallBack()) {
 
     override fun getItemViewType(position: Int): Int {

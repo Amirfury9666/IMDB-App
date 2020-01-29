@@ -19,10 +19,14 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
 
-
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 class ResultActivity : BaseActivity<ActivityResultBinding>(),KodeinAware, ResponseCallback<SearchResponse> {
-
-
     override val kodein: Kodein by kodein()
     private lateinit var mSearchViewModel: SearchViewModel
     private val factory : ViewModelFactory<SearchRepository> by instance()

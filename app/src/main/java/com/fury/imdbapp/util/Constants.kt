@@ -1,5 +1,12 @@
 package com.fury.imdbapp.util
 
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 object Constants {
 
     const val BASE_URL = "https://movie-database-imdb-alternative.p.rapidapi.com"

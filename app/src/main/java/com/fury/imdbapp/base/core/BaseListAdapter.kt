@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 /**
  *
- * Created By Amir Fury on Jan 20 2020
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
  *
  */
 

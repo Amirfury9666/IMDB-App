@@ -6,7 +6,13 @@ import com.fury.imdbapp.repository.MovieDetailRepository
 import com.fury.imdbapp.repository.SearchRepository
 import com.fury.imdbapp.viewmodel.MovieDetailViewModel
 import com.fury.imdbapp.viewmodel.SearchViewModel
-
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 class ViewModelFactory<R>(private val repository : R) : ViewModelProvider.NewInstanceFactory(){
     override fun <T : ViewModel?> create(modelClass: Class<T>): T =
         with(modelClass){

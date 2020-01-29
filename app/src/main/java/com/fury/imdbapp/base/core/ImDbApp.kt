@@ -13,7 +13,13 @@ import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
 import org.kodein.di.generic.provider
 import org.kodein.di.generic.singleton
-
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 class ImDbApp : Application(),KodeinAware{
     override val kodein: Kodein = Kodein.lazy {
         import(androidXModule(this@ImDbApp))

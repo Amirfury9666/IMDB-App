@@ -10,7 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 /**
  *
- * Created By Amir Fury on Jan 16 2020
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
  *
  */
 abstract class BaseActivity<B> : AppCompatActivity() {

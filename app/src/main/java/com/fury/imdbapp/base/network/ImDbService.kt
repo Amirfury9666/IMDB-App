@@ -6,6 +6,13 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 interface ImDbService {
     @GET("/")
     suspend fun searchMovie(@Query("s") searchKeyWord : String, @Query("r") responseType : String) : Response<SearchResponse>

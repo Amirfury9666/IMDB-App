@@ -11,12 +11,14 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 /**
  *
  * Created By Amir Fury on Jan 29 2020
  *
+ * Email fury.amir93@gmail.com
+ *
  */
-
 private const val BASE_URL = Constants.BASE_URL
 
 object ServiceGenerator {

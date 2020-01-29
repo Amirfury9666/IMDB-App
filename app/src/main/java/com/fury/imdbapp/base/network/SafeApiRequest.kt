@@ -5,6 +5,13 @@ import org.json.JSONException
 import org.json.JSONObject
 import retrofit2.Response
 
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 abstract class SafeApiRequest {
     suspend fun<T : Any> apiRequest(call : suspend () -> Response<T>) : T {
         val response = call.invoke()

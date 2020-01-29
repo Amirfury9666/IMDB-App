@@ -11,7 +11,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 /**
  *
- * Created By Amir Fury on Jan 16 2020
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
  *
  */
 

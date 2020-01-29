@@ -8,6 +8,13 @@ import com.fury.imdbapp.R
 import com.fury.imdbapp.base.core.BaseActivity
 import com.fury.imdbapp.databinding.ActivitySplashBinding
 
+/**
+ *
+ * Created By Amir Fury on Jan 29 2020
+ *
+ * Email fury.amir93@gmail.com
+ *
+ */
 private const val SPLASH_TIME = 1500L
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     override val layoutRes: Int
