@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.fury.imdbapp.response.detail.SearchDetail" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteColor"
+        tools:context=".ui.DetailsActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+
+
+        <ScrollView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/poster"
+                    loadImage="@{model.poster}"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/titleText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Title :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.title}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Year :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/year"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.year}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Rated :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/rated"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.rated}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Released :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/released"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.released}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Runtime :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/runtime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.runtime}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Genre :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/genre"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.genre}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Director :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/director"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.director}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Writer :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/writer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.writer}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Actors :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/actors"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.actors}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Plot :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/plot"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.plot}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Language :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/language"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.language}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Country :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/country"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.country}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Metascore :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/metascore"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.metascore}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="IMDB Rating :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/imdbRating"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.imdbRating}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="IMDB Votes :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/imdbVotes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.imdbVotes}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="DVD :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/dvd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.dVD}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Box Office :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/boxOffice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.boxOffice}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Production :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/production"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.production}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin16dip"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|top"
+                            android:layout_weight="0.5"
+                            android:text="Website :"
+                            android:textColor="@color/textColorPrimary"
+                            android:textSize="@dimen/textSize16dp" />
+
+                        <TextView
+                            android:id="@+id/website"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/titleText"
+                            android:layout_weight="1.5"
+                            android:text="@{model.website}"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="@dimen/textSize16dp"
+                            tools:text="Dead pool" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

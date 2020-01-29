@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.fury.imdbapp.viewmodel.SearchViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activityBackground"
+        tools:context=".ui.HomeActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin16dip"
+            android:elevation="@dimen/cardElevation"
+            app:cardBackgroundColor="@color/whiteColor"
+            app:cardCornerRadius="@dimen/margin5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMDB Search"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/textSize21dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin10dp"/>
+                <EditText
+                    android:id="@+id/movieNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/editTextHeight"
+                    android:layout_centerInParent="true"
+                    android:hint="Movie Name"
+                    android:text="@={model.keyword}"
+                    android:paddingHorizontal="@dimen/padding16"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/hintColor"
+                    android:singleLine="true"
+                    android:background="@drawable/edit_text_bg"
+                    android:maxLines="1"
+                    android:textSize="@dimen/textSize16dp" />
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_below="@+id/movieNameEt"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:text="Search"
+                    android:onClick="@{model::onSearchClick}"
+                    android:elevation="@dimen/margin5dp"
+                    />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</layout>

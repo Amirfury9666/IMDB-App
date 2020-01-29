@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize8dp">8dip</dimen>
+    <dimen name="textSize10dp">10dip</dimen>
+    <dimen name="textSize11dp">11dip</dimen>
+    <dimen name="textSize12dp">12dip</dimen>
+    <dimen name="textSize14dp">14dip</dimen>
+    <dimen name="textSize16dp">16dip</dimen>
+    <dimen name="textSize18dp">18dip</dimen>
+    <dimen name="textSize21dp">21dip</dimen>
+    <dimen name="textSize24dp">24dip</dimen>
+
+    <dimen name="actionBarSize">52dp</dimen>
+    <dimen name="margin5dp">5dip</dimen>
+    <dimen name="margin10dp">10dip</dimen>
+    <dimen name="margin12dp">12dip</dimen>
+    <dimen name="margin16dip">16dip</dimen>
+    <dimen name="margin2dp">2dip</dimen>
+    <dimen name="margin20dp">20dip</dimen>
+
+
+    <dimen name="activityPadding">16dip</dimen>
+    <dimen name="padding2dp">2dip</dimen>
+    <dimen name="padding5dp">5dip</dimen>
+    <dimen name="padding8dp">8dip</dimen>
+    <dimen name="padding10dp">10dip</dimen>
+
+    <dimen name="cardElevation">4dp</dimen>
+    <dimen name="buttonHeight">50dip</dimen>
+    <dimen name="editTextHeight">40dip</dimen>
+    <dimen name="padding16">16dip</dimen>
+
+    <dimen name="margin40dp">40dip</dimen>
+    <dimen name="margin30dp">30dip</dimen>
+
+</resources>
