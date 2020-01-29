@@ -29,4 +29,5 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
         }, SPLASH_TIME)
     }
 
+    //
 }
