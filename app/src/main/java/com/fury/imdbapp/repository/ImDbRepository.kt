@@ -12,11 +12,11 @@ import com.fury.imdbapp.response.search.SearchResponse
  * Email fury.amir93@gmail.com
  */
 class ImDbRepository (private val  apiService  : ImDbService) : SafeApiRequest(){
-    suspend fun getMovieDetails(imdbId : String) : SearchDetail {
-        return apiRequest { apiService.getMovieDetails(imdbId,"json") }
+    suspend fun getMovieDetails(imDbId : String) : SearchDetail {
+        return apiRequest { apiService.getMovieDetails(imDbId,"json") }
     }
 
-    suspend fun searchMovie(keyWork : String) : SearchResponse {
-        return apiRequest { apiService.searchMovie(keyWork,"json") }
+    suspend fun searchMovie(keyWord : String) : SearchResponse {
+        return apiRequest { apiService.searchMovie(keyWord,"json") }
     }
 }

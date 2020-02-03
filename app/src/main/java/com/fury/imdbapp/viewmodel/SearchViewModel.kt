@@ -33,10 +33,10 @@ class SearchViewModel(private val repository : ImDbRepository) : ViewModel(){
         }
     }
 
-    fun searchMovie(keyWork : String){
+    fun searchMovie(keyWord : String){
         Coroutines.main {
             try {
-                val response = repository.searchMovie(keyWork)
+                val response = repository.searchMovie(keyWord)
                 responseCallback?.onSuccess(response)
             }catch (e :Exception){
                 responseCallback?.onFailure(e.message)

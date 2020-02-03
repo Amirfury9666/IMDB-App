@@ -3,7 +3,6 @@ package com.fury.imdbapp.base.core
 import android.app.Application
 import com.fury.imdbapp.base.network.ServiceGenerator
 import com.fury.imdbapp.repository.ImDbRepository
-import com.fury.imdbapp.repository.SearchRepository
 import com.fury.imdbapp.viewmodel.MovieDetailViewModel
 import com.fury.imdbapp.viewmodel.SearchViewModel
 import org.kodein.di.Kodein

@@ -26,13 +26,14 @@ import org.kodein.di.generic.instance
  *
  */
 class ResultActivity : BaseActivity<ActivityResultBinding>(),KodeinAware, ResponseCallback<SearchResponse> {
+
+
     override val kodein: Kodein by kodein()
     private lateinit var mSearchViewModel: SearchViewModel
     private val factory : ViewModelFactory by instance()
-
-
     private var mResultAdapter = ResultAdapter(arrayListOf())
     private lateinit var mBinding : ActivityResultBinding
+
     override val layoutRes: Int get() = R.layout.activity_result
 
     override fun getToolbar(binding: ActivityResultBinding): Toolbar? {return binding.toolbar}
