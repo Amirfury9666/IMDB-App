@@ -8,7 +8,6 @@ import com.fury.imdbapp.base.core.BaseActivity
 import com.fury.imdbapp.base.core.ViewModelFactory
 import com.fury.imdbapp.callback.ResponseCallback
 import com.fury.imdbapp.databinding.ActivityDetailsBinding
-import com.fury.imdbapp.repository.MovieDetailRepository
 import com.fury.imdbapp.response.detail.SearchDetail
 import com.fury.imdbapp.util.hide
 import com.fury.imdbapp.util.show
@@ -30,7 +29,7 @@ class DetailsActivity : BaseActivity<ActivityDetailsBinding>(),KodeinAware, Resp
     override val kodein: Kodein by kodein()
 
     private lateinit var mDetailViewModel : MovieDetailViewModel
-    private val factory : ViewModelFactory<MovieDetailRepository> by instance()
+    private val factory : ViewModelFactory by instance()
     private lateinit var mBinding : ActivityDetailsBinding
     override val layoutRes: Int get() = R.layout.activity_details
     override fun getToolbar(binding: ActivityDetailsBinding): Toolbar? {return binding.toolbar}

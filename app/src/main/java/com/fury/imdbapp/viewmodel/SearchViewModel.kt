@@ -4,7 +4,7 @@ import android.content.Intent
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.fury.imdbapp.callback.ResponseCallback
-import com.fury.imdbapp.repository.SearchRepository
+import com.fury.imdbapp.repository.ImDbRepository
 import com.fury.imdbapp.response.search.SearchResponse
 import com.fury.imdbapp.ui.ResultActivity
 import com.fury.imdbapp.util.Coroutines
@@ -17,7 +17,7 @@ import com.fury.imdbapp.util.toast
  * Email fury.amir93@gmail.com
  *
  */
-class SearchViewModel(private val repository : SearchRepository) : ViewModel(){
+class SearchViewModel(private val repository : ImDbRepository) : ViewModel(){
 
     var responseCallback : ResponseCallback<SearchResponse>?  = null
     var keyword : String? = null

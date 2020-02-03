@@ -9,7 +9,6 @@ import com.fury.imdbapp.base.core.BaseActivity
 import com.fury.imdbapp.base.core.ViewModelFactory
 import com.fury.imdbapp.callback.ResponseCallback
 import com.fury.imdbapp.databinding.ActivityResultBinding
-import com.fury.imdbapp.repository.SearchRepository
 import com.fury.imdbapp.response.search.SearchResponse
 import com.fury.imdbapp.util.hide
 import com.fury.imdbapp.util.toast
@@ -29,7 +28,7 @@ import org.kodein.di.generic.instance
 class ResultActivity : BaseActivity<ActivityResultBinding>(),KodeinAware, ResponseCallback<SearchResponse> {
     override val kodein: Kodein by kodein()
     private lateinit var mSearchViewModel: SearchViewModel
-    private val factory : ViewModelFactory<SearchRepository> by instance()
+    private val factory : ViewModelFactory by instance()
 
 
     private var mResultAdapter = ResultAdapter(arrayListOf())
