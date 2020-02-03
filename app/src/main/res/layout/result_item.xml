@@ -30,32 +30,44 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop" />
 
-            <TextView
-                android:id="@+id/movieName"
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_margin="@dimen/margin10dp"
-                android:singleLine="true"
-                android:text="@{model.title}"
-                android:textColor="@color/whiteColor"
-                android:textSize="@dimen/textSize18dp"
-                android:textStyle="bold"
-                tools:text="Avengers Endgame" />
+                android:orientation="vertical"
+                android:background="@drawable/feed_item_bg"
+                >
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="@{model.year}"
+                    android:layout_marginLeft="@dimen/margin10dp"
+                    android:layout_marginTop="@dimen/margin10dp"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/textSize14dp"
+                    android:textStyle="bold"
+                    tools:text="2016" />
+                <TextView
+                    android:id="@+id/movieName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin10dp"
+                    android:layout_marginBottom="@dimen/margin10dp"
+                    android:singleLine="true"
+                    android:text="@{model.title}"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/textSize16dp"
+                    android:textStyle="bold"
+                    tools:text="Avengers Endgame" />
 
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/year"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_margin="@dimen/margin10dp"
-                android:singleLine="true"
-                android:text="@{model.year}"
-                android:textColor="@color/whiteColor"
-                android:textSize="@dimen/textSize16dp"
-                android:textStyle="bold"
-                tools:text="2016" />
 
 
         </RelativeLayout>
